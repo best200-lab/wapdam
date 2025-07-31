@@ -1,0 +1,247 @@
+/* Custom Font Setup */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    line-height: 1.6;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to right, #2563eb, #1e40af);
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav a {
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover, .mobile-menu a:hover {
+    color: #fbbf24;
+}
+
+.mobile-menu {
+    background: #1e40af;
+}
+
+.mobile-menu a {
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    background-color: #2563eb;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom, #1e40af, #111827);
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 1rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-block-end: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-inline-size: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.hero img {
+    max-inline-size: 100%;
+    block-size: auto;
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    .hero {
+        padding: 6rem 2rem;
+    }
+}
+
+/* Featured Posts */
+.featured-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 3rem 1rem;
+    max-inline-size: 1200px;
+    margin: 0 auto;
+}
+
+.post-card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.post-card img {
+    inline-size: 100%;
+    block-size: 12rem;
+    object-fit: cover;
+}
+
+.post-card h3 {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.post-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+.post-card .text-sm {
+    padding: 0 1rem 1rem;
+    color: #9ca3af;
+}
+
+/* Features Section */
+.features-section {
+    background-color: #f9fafb;
+    padding: 3rem 1rem;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card .text-3xl {
+    color: #2563eb;
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-block-end: 0.5rem;
+}
+
+.feature-card p {
+    color: #6b7280;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 3rem 1rem;
+    background-color: #ffffff;
+}
+
+.contact-info .info-item {
+    display: flex;
+    align-items: center;
+    margin-block-end: 1.5rem;
+}
+
+.contact-info .text-2xl {
+    color: #2563eb;
+    margin-inline-end: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    inline-size: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    outline: none;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #1f2937, #111827);
+    color: #ffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+footer a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fbbf24;
+}
+
+footer .social-links a {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+@media (min-width: 768px) {
+    footer .grid {
+        max-inline-size: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Accessibility and SEO */
+a {
+    text-decoration: none;
+}
+
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1f2937;
+    font-weight: 700;
+}
+
+/* Button Styling */
+.btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}

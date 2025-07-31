@@ -1,0 +1,19 @@
+title: Wapdam Blog
+email: support@wapdam.com.ng
+description: >- 
+ wapdam.com.ng, featuring tech updates, gaming news, and insightful articles.
+baseurl: ""
+url: "https://wapdam.com.ng"
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:title
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

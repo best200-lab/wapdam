@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="description" content="Wapdam Blog: Your ultimate source for tech updates, gaming news, and insightful articles.">
+    <!-- Open Graph -->
+    <meta property="og:description" content="Wapdam Blog: Your ultimate source for tech updates, gaming news, and insightful articles.">
+    <meta property="og:site_name" content="Wapdam Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wapdam.com.ng/">
+    <meta property="og:image" content="https://wapdam.com.ng/assets/images/uploads/home.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:title" content="Wapdam Blog">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wapdam Blog">
+    <meta name="twitter:description" content="Wapdam Blog: Your ultimate source for tech updates, gaming news, and insightful articles.">
+    <meta name="twitter:image" content="https://wapdam.com.ng/assets/images/uploads/home.jpg">
+    {% seo %}
+    <title>Wapdam Blog</title>
+    <link rel="canonical" href="https://wapdam.com.ng/" />
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://wapdam.com.ng/favicon.ico' rel='icon' type='image/x-icon' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Wapdam Blog",
+        "url": "https://wapdam.com.ng/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://wapdam.com.ng/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Wapdam Blog",
+        "url": "https://wapdam.com.ng/",
+        "description": "A blog featuring tech updates, gaming news, and insightful articles.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Wapdam Blog",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wapdam.com.ng/assets/images/uploads/logo.png"
+            }
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <!-- Header/Navigation -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-4 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="logo">
+                <a href="{{ '/' | relative_url }}" class="flex items-center space-x-2" aria-label="Wapdam Blog Home">
+                    <span class="text-2xl font-bold">Wapdam<span class="text-yellow-400">Blog</span></span>
+                </a>
+            </div>
+            <nav class="main-nav hidden md:flex space-x-6">
+                <a href="{{ '/' | relative_url }}" class="hover:text-yellow-400 transition">Home</a>
+                <a href="{{ '/categories/tech' | relative_url }}" class="hover:text-yellow-400 transition">Tech</a>
+                <a href="{{ '/categories/gaming' | relative_url }}" class="hover:text-yellow-400 transition">Gaming</a>
+                <a href="{{ '/about' | relative_url }}" class="hover:text-yellow-400 transition">About</a>
+                <a href="/admin" class="hover:text-yellow-400 transition">Admin</a>
+            </nav>
+            <div class="header-actions flex items-center space-x-4">
+                <button class="search-btn text-white" aria-label="Search"><i class="fas fa-search"></i></button>
+                <button class="menu-toggle md:hidden" id="menuToggle" aria-label="Toggle mobile menu">
+                    <span class="w-6 h-0.5 bg-white block mb-1.5"></span>
+                    <span class="w-6 h-0.5 bg-white block mb-1.5"></span>
+                    <span class="w-6 h-0.5 bg-white block"></span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-blue-700 text-white py-4">
+            <a href="{{ '/' | relative_url }}" class="block px-4 py-2 hover:bg-blue-800">Home</a>
+            <a href="{{ '/categories/tech' | relative_url }}" class="block px-4 py-2 hover:bg-blue-800">Tech</a>
+            <a href="{{ '/categories/gaming' | relative_url }}" class="block px-4 py-2 hover:bg-blue-800">Gaming</a>
+            <a href="{{ '/about' | relative_url }}" class="block px-4 py-2 hover:bg-blue-800">About</a>
+            <a href="/admin" class="block px-4 py-2 hover:bg-blue-800">Admin</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero bg-gradient-to-b from-blue-900 to-gray-900 text-white py-20" id="home">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="hero-content md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Wapdam Blog</h1>
+                <p class="text-lg mb-6">Your go-to source for tech insights, gaming news, and more.</p>
+                <div class="hero-buttons space-x-4">
+                    <a href="{{ '/categories/tech' | relative_url }}" class="bg-yellow-400 text-black px-6 py-3 rounded-full hover:bg-yellow-500 transition">Tech Articles</a>
+                    <a href="{{ '/categories/gaming' | relative_url }}" class="bg-gray-700 text-white px-6 py-3 rounded-full hover:bg-gray-800 transition">Gaming News</a>
+                </div>
+            </div>
+            <div class="hero-image md:w-1/2 mt-8 md:mt-0">
+                <img src="{{ '/assets/images/uploads/hero-bg.jpg' | relative_url }}" alt="Tech and gaming insights at Wapdam Blog" class="w-full rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Posts Section -->
+    <section class="featured-posts py-12 bg-white" id="posts">
+        <div class="container mx-auto px-4">
+            <div class="section-header text-center mb-8">
+                <h2 class="text-3xl font-bold">Featured Posts</h2>
+                <p class="text-gray-600">Discover our latest articles and updates.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {% for post in site.posts limit:6 %}
+                    <div class="post-card bg-gray-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                        <a href="{{ post.url | relative_url }}" aria-label="Read more about {{ post.title }}">
+                            <img src="{{ post.featured_image | default: '/assets/images/uploads/default-post.jpg' | relative_url }}" alt="{{ post.title | escape }}" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">{{ post.title }}</h3>
+                                <p class="text-gray-600 mb-4">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+                                <p class="text-sm text-gray-500">{{ post.date | date: "%B %d, %Y" }}</p>
+                            </div>
+                        </a>
+                        <script type="application/ld+json">
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "BlogPosting",
+                            "headline": "{{ post.title | escape }}",
+                            "image": "{{ post.featured_image | default: '/assets/images/uploads/default-post.jpg' | relative_url }}",
+                            "datePublished": "{{ post.date | date_to_xmlschema }}",
+                            "description": "{{ post.excerpt | strip_html | truncate: 160 | escape }}",
+                            "author": {
+                                "@type": "Person",
+                                "name": "{{ post.author | default: 'Wapdam Blog Team' }}"
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "Wapdam Blog",
+                                "logo": {
+                                    "@type": "ImageObject",
+                                    "url": "https://wapdam.com.ng/assets/images/uploads/logo.png"
+                                }
+                            },
+                            "url": "https://wapdam.com.ng{{ post.url }}"
+                        }
+                        </script>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="section-footer text-center mt-8">
+                <a href="{{ '/posts' | relative_url }}" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">View All Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-bolt"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Fresh Content</h3>
+                    <p class="text-gray-600">Daily updates with the latest tech and gaming news.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-check-circle"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Expert Insights</h3>
+                    <p class="text-gray-600">Articles written by industry experts.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-sort-amount-up"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Organized Categories</h3>
+                    <p class="text-gray-600">Easily browse by tech, gaming, and more.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Safe & Secure</h3>
+                    <p class="text-gray-600">Trusted content with secure browsing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-12 bg-white" id="contact">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Contact Us</h2>
+            <p class="text-gray-600 text-center mb-8">Have questions or feedback? We'd love to hear from you.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="contact-info">
+                    <div class="info-item flex items-center mb-6">
+                        <div class="text-blue-600 text-2xl mr-4"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h3 class="text-lg font-semibold">Email</h3>
+                            <p>support@wapdam.com.ng</p>
+                        </div>
+                    </div>
+                    <div class="info-item flex items-center mb-6">
+                        <div class="text-blue-600 text-2xl mr-4"><i class="fas fa-comments"></i></div>
+                        <div>
+                            <h3 class="text-lg font-semibold">Community</h3>
+                            <p><a href="https://t.me/wapdamblog" target="_blank" class="text-blue-600 hover:text-blue-800">Join our Telegram channel</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item flex items-center">
+                        <div class="text-blue-600 text-2xl mr-4"><i class="fas fa-file-alt"></i></div>
+                        <div>
+                            <h3 class="text-lg font-semibold">Legal</h3>
+                            <p><a href="/dmca" class="text-blue-600 hover:text-blue-800">DMCA requests</a></p>
+                        </div>
+                    </div>
+                </div>
+                <form action="https://formspree.io/f/xldbkvwy" method="POST" class="space-y-4">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Your Email</label>
+                        <input type="email" name="email" id="email" class="w-full p-3 border rounded-lg focus:ring-blue-600 focus:border-blue-600" required aria-describedby="email-description">
+                        <p id="email-description" class="text-sm text-gray-500 mt-1">We'll never share your email with anyone else.</p>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Your Message</label>
+                        <textarea name="message" id="message" rows="5" class="w-full p-3 border rounded-lg focus:ring-blue-600 focus:border-blue-600" required aria-describedby="message-description"></textarea>
+                        <p id="message-description" class="text-sm text-gray-500 mt-1">Please provide your feedback or inquiry.</p>
+                    </div>
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition" aria-label="Submit contact form">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="logo">
+                        <a href="{{ '/' | relative_url }}" class="flex items-center space-x-2" aria-label="Wapdam Blog Home">
+                            <span class="text-xl font-bold">Wapdam<span class="text-yellow-400">Blog</span></span>
+                        </a>
+                    </div>
+                    <div class="flex space-x-4 mt-4 social-links">
+                        <a href="https://facebook.com/wapdamblog" target="_blank" class="text-white hover:text-yellow-400" aria-label="Follow Wapdam Blog on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://t.me/wapdamblog" target="_blank" class="text-white hover:text-yellow-400" aria-label="Join Wapdam Blog on Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="https://youtube.com/@wapdamblog" target="_blank" class="text-white hover:text-yellow-400" aria-label="Subscribe to Wapdam Blog on YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="{{ '/' | relative_url }}" class="hover:text-yellow-400">Home</a></li>
+                        <li><a href="{{ '/categories/tech' | relative_url }}" class="hover:text-yellow-400">Tech</a></li>
+                        <li><a href="{{ '/categories/gaming' | relative_url }}" class="hover:text-yellow-400">Gaming</a></li>
+                        <li><a href="{{ '/about' | relative_url }}" class="hover:text-yellow-400">About</a></li>
+                        <li><a href="/admin" class="hover:text-yellow-400">Admin</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Stay Updated</h3>
+                    <p class="text-gray-400">Subscribe to our newsletter for the latest updates.</p>
+                    <form action="https://formspree.io/f/xldbkvwy" method="POST" class="mt-4">
+                        <input type="email" name="email" placeholder="Enter your email" class="w-full p-3 border rounded-lg focus:ring-blue-600 focus:border-blue-600" required aria-describedby="newsletter-description">
+                        <p id="newsletter-description" class="text-sm text-gray-500 mt-1">Get the latest tech and gaming news.</p>
+                        <button type="submit" class="bg-yellow-400 text-black px-6 py-2 mt-2 rounded-full hover:bg-yellow-500 transition" aria-label="Subscribe to newsletter">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <p>Wapdam Blog &copy; 2023 - <span id="yearPlaceholder">2025</span> All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
