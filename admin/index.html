@@ -1,51 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wapdam Blog - Admin Panel</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f3f4f6;
-    }
-    .cms-header {
-      background: linear-gradient(to right, #2563eb, #1e40af);
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .cms-header h1 {
-      font-size: 1.75rem;
-      font-weight: 700;
-    }
-  </style>
-</head>
-<body>
-  <div class="cms-header">
-    <h1>Wapdam Blog Admin Panel</h1>
-  </div>
-
-  <!-- Load CMS -->
-  <script src="https://unpkg.com/@decap-cms/app@^3.0.0/dist/decap-cms.js"></script>
-  <!-- Load Netlify Identity -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-  <script>
-    window.netlifyIdentity.on("init", (user) => {
-      if (!user) {
-        netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-
-    // Show login/signup widget by default
-    window.netlifyIdentity.init();
-    window.netlifyIdentity.open();  // 👈 force open the login/signup form
-  </script>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Content Manager</title>
+  </head>
+  <body>
+    <!-- Include the script that builds the page and powers Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  </body>
 </html>
