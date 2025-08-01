@@ -32,6 +32,9 @@
     <h1>Wapdam Blog Admin Panel</h1>
   </div>
 
+  <!-- 🟢 This is the missing piece -->
+  <div id="nc-root"></div>
+
   <!-- Load Decap CMS -->
   <script src="https://unpkg.com/@decap-cms/app@^3.0.0/dist/decap-cms.js"></script>
 
@@ -39,7 +42,6 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   <script>
-    // Initialize Netlify Identity
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", (user) => {
         if (!user) {
